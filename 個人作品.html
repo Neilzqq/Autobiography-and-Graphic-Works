@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人平面作品</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@800&family=Dela+Gothic+One&family=Pangolin&family=Viaoda+Libre&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .banner {
+            height: calc(100vh - 110px);
+            position: relative;
+        }
+
+        .banner .bg4 {
+            background-color: #e6dace;
+            width: 40%;
+            height: calc(100vh - 110px);
+        }
+
+        .banner .bg6 {
+            width: 60%;
+            background-color: #fff;
+            height: calc(100vh - 110px);
+        }
+
+        .banner .card1 {
+            display: flex;
+            position: absolute;
+            top: 50px;
+            left: 300px;
+        }
+
+        .banner .card1 .left {
+            width: 30%;
+            border: var(--container-corvid-border-width, var(--brw, 1px)) solid var(--container-corvid-border-color, rgba(var(--brd, var(--color_15)), var(--alpha-brd, 1)));
+            background-color: var(--container-corvid-background-color, rgba(var(--bg, var(--color_11)), var(--alpha-bg, 1)));
+            box-shadow: var(--shd, 0 1px 4px rgba(0, 0, 0, .6));
+            text-align: center;
+            margin-right: 50px;
+            padding-top: 30px;
+
+        }
+
+        .card-img {
+            width: 60%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .banner .card1 .left img {
+            width: 100%;
+            border-radius: 50%;
+
+        }
+
+        .banner .card1 .left p {
+            line-height: 1.2em;
+            text-align: center;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+
+
+        .banner .card1 .left a i {
+            color: #000;
+            font-size: 24px;
+        }
+
+        .banner .card1 .right {
+            width: 35%;
+        }
+
+        .banner .card1 .right h1 {
+            font-size: 100px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .banner .card1 .right span {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+        .banner .card1 .right p {
+            font-size: 15px;
+            line-height: 1.5em;
+            font-weight: 400;
+        }
+
+
+        nav {
+            display: flex;
+            align-items: center;
+            background-color: #CEE6DA;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        nav p {
+            font-family: cursive;
+            font-size: 3rem;
+            padding-top: 20px;
+        }
+
+        .links {
+            border-left: 2px solid rgb(87, 172, 201);
+            padding: 10px 0 10px 20px;
+            margin-left: 30px;
+        }
+
+        .links a {
+            font-family: 'Pangolin', cursive;
+            font-size: 1.5rem;
+            color: rgb(173, 70, 70);
+            margin: 10px;
+        }
+
+        @media (max-width:1150px) {
+            .icons {
+                display: none;
+            }
+        }
+
+        .intro {
+            margin-top: 100px;
+        }
+
+        .intro .title {
+            font-size: 5rem;
+        }
+
+        .intro .title::after {
+            content: "";
+            display: block;
+            width: 300px;
+            height: 20px;
+            background-color: #afa;
+            margin-top: -30px;
+        }
+
+        .intro-wrap {
+            position: relative;
+            margin-top: 200px;
+            transform: translateY(200px);
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .intro-wrap.show {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        .intro-wrap p {
+            width: 40%;
+            background-color: rgba(27, 199, 33, 0.618);
+            padding: 30px;
+            border: 2px green dashed;
+            position: absolute;
+            right: -50px;
+            top: -100px;
+        }
+
+        .intro-wrap:nth-child(2n-1) p {
+            left: -50px;
+        }
+
+        .intro-wrap img {
+            width: 80%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .intro-wrap:nth-child(2n-1) img {
+            margin-left: 200px;
+        }
+
+        @media (max-width:375px) {
+            .banner {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .banner .bg4,
+            .banner .bg6 {
+                width: 100%;
+            }
+
+            .banner .card1 {
+                display: block;
+                left: 0;
+                top: 0;
+                padding: 0 30px;
+                padding-top: 50px;
+            }
+
+            .banner .card1 .right,
+            .banner .card1 .left {
+                width: 100%;
+            }
+
+            .banner .card1 .right p {
+                font-family: fantasy;
+            }
+
+            .banner .card1 .left {
+                margin-bottom: 30px;
+                padding: 20px 0;
+            }
+
+            .d-flex {
+                margin-top: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="banner">
+            <div class="bg4"></div>
+            <div class="bg6"></div>
+            <div class="card1">
+                <div class="left">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./平面作品/IMG_1042.JPG" alt="">
+                        </div>
+                        <p>Neil Meng</p>
+                    </div>
+                    <div class="card-icon">
+                        <a href="https://www.instagram.com/neil0520/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Neilzqq"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>Hello</h1>
+                    <span>Here's who I am & what I do</span>
+                    <p>個人平時也喜歡透過網路看一些有關個人興趣的文章，便發現對於如何製作網頁有了興趣，於是就報名了資策會的UI/UX設計課程，在於工作方面的經驗，曾在電子公司內當過實習生，平時幫忙購買維修零件和取和送貨的部分，也曾在門禁機公司當實習生設計過他們公司網頁的EDM和Banner和網站維護，來當作輪播牆的展示，和平面設計一些商品圖。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="d-flex">
+        <p>個人平面作品</p>
+        <div class="links">
+            <a href="#">About</a>
+            <a href="#">photos</a>
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="intro">
+                    <h2 class="title">美術作品</h2>
+                    <div class="intro-wrap">
+                        <img src="./平面作品/2019友通健行-2-01.jpg" alt="">
+                    </div>
+                    <div class="intro-wrap">
+                        <img src="./平面作品/20200南亞科技晚會_主視覺-0714-01.jpg" alt="">
+                    </div>
+                    <div class="intro-wrap">
+                        <img src="./平面作品/HTC20週年-主視覺-5-01.jpg" alt="">
+                    </div>
+                    <div class="intro-wrap">
+                        <img src="./平面作品/友通資訊建行-5-01.jpg" alt="">
+                    </div>
+                    <div class="intro-wrap">
+                        <img src="./平面作品/台積-1-01.jpg" alt="">
+                    </div>
+                    <div class="intro-wrap">
+                        <img src="./平面作品/奕力科技尾牙-3-01.jpg" alt="">
+                    </div>
+                    <div class="intro-wrap">
+                        <img src="./平面作品/活動主視覺-0704-01.jpg" alt="">
+                    </div>
+                    <div class="intro-wrap">
+                        <img src="./平面作品/采鈺主視覺53-1-01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $(window).scroll(function () {
+            // 用 jQuery 的 each 迴圈，把每一個 .intro-wrap 拿出來檢查
+            // 這裡總共會跑五次，index 會從 0 到 4 執行五次
+            // item 則是每一個 .intro-wrap 物件
+            $('.intro-wrap').each(function (index, item) {
+                console.log('item:', $(item).offset().top);
+
+                // 當使用者滑動超過我們某一個 .intro-wrap 在網頁的高
+                // 表示已經到了要 show 的時機點，因此我們給他 .addClass('show')
+                if ($(window).scrollTop() + $(window).height() >= $(item).offset().top) {
+                    $(item).addClass('show');
+                }
+                else {
+                    $(item).removeClass('show');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
